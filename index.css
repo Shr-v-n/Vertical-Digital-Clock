@@ -1,113 +1,67 @@
-:root {
-    /* Background */
-    --background-color: #e6ecf8;
-  
-    /* Bar background (frosted glass look) */
-    --bar-color: #f3f6fc;
-    --bar-shadow: 0 8px 24px rgba(0, 0, 0, 0.08), 
-                  0 4px 12px rgba(0, 0, 0, 0.05);
-  
-    /* Digit text */
-    --digit-color: #8fa5c2;
-    --active-digit-color: #145bb9;
-  
-    /* Highlight Circle (center focus) */
-    --highlight-circle-color: #92affe;
-    --highlight-circle-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  
-    /* Font */
-    --font-family: 'Segoe UI', sans-serif;
-  }
-  
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+:root{
+    --background-gradient: linear-gradient(to bottom, rgb(212, 133, 249), #e6ecf8);;
+}
+
 body{
     height: 100vh;
     width: 100vw;
-    background-color: var(--background-color);
-    font-family: var(--font-family);
+    background: var(--background-gradient);
     overflow: hidden;
 }
 
-.clock{
+.Clock{
     display: flex;
-    justify-self: center;
-    margin-top: 50vh;
-    gap: 40px;
-}
-
-.verticalBar{
-    width: 60px;
-    border-radius: 20px;
-    gap: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-}
-
-.highlightCircle{
-    background-color: var(--highlight-circle-color);
-    box-shadow: var(--highlight-circle-shadow);
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    border: 1px double rgb(90, 156, 255);
-    position: absolute;
-    z-index: 10;
-    background-color: rgba(146, 175, 254, 0.4);
-    box-shadow: var(--highlight-circle-shadow);
-}
-
-.digitTrack{
-    padding-top: 7px;
-    padding-bottom: 7px;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    transition: transform 0.7s ease-out;
-    background-color: var(--bar-color);
-    width: 100%;
-    align-items: center;
-    border-radius: 20px;
-    z-index: 1;
-    box-shadow: var(--bar-shadow);
-}
-
-.digit{
-    /* color: var(--active-digit-color); */
-    font-size: 30px;
-    height: 40px;
-    z-index: 1;
-    transition: all 0.3s ease;
-}
-
-.digit.active {
-    color: var(--active-digit-color);
-    font-weight: bold;
-    text-shadow: var(--digit-shadow);
+    height: 100%;
+    justify-content: center;
+    transform: translateY(40%);
+    gap: 30px;
 }
 
 .Colon{
-    font-size: 30px;
+    font-size: 33px;
+    transform: translateY(-4px);
 }
 
-@media (max-width: 768px) {
-    .clock {
-        gap: 20px;
-        transform: scale(0.8);
-    }
-    
-    .verticalBar {
-        width: 50px;
-    }
-    
-    .digit {
-        font-size: 24px;
-    }
+.Vertical-Bar{
+    height: 0px;
+}
+
+.Highlight-Circle{
+    height: 35px;
+    width: 50px;
+    background-color: rgba(0, 0, 0, 0.473);
+    position: absolute;
+    border-radius: 50px;
+    z-index: 10;
+}
+
+.Track{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50px;
+    align-items: center;
+    transform: translateY(-2px);
+    background-color: rgb(188, 218, 244);
+    border-radius: 15px;
+    transition: transform 0.7s ease-out;
+    box-shadow: -2px -1px 1px 1px rgb(42, 42, 42);
+}
+
+.Digit{
+    color: rgb(0, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 33px;
+    height: 40px;
+}
+
+#Meridian{
+    font-size: 30px;
+    transform: translateX(-20px);
 }
