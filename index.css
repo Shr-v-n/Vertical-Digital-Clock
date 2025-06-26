@@ -5,7 +5,7 @@
 }
 
 :root{
-    --background-gradient: linear-gradient(to bottom, rgb(212, 133, 249), #e6ecf8);;
+    --background-gradient:linear-gradient(135deg, #ebebeb, #848484);
 }
 
 body{
@@ -33,9 +33,9 @@ body{
 }
 
 .Highlight-Circle{
-    height: 35px;
+    height: 40px;
     width: 50px;
-    background-color: rgba(0, 0, 0, 0.473);
+    background-color: #40404058;
     position: absolute;
     border-radius: 50px;
     z-index: 10;
@@ -48,10 +48,10 @@ body{
     width: 50px;
     align-items: center;
     transform: translateY(-2px);
-    background-color: rgb(188, 218, 244);
-    border-radius: 15px;
+    background: linear-gradient(135deg, #ebebeb, #878787);
+    border-radius: 10px;
     transition: transform 0.7s ease-out;
-    box-shadow: -2px -1px 1px 1px rgb(42, 42, 42);
+    box-shadow: -2px -1px 3px 3px rgb(255, 255, 255), 2px 1px 3px 3px black;
 }
 
 .Digit{
